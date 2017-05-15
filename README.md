@@ -23,8 +23,8 @@ children.
 
 ### Bubble Plot
 
-In the second graph you can see a bubble graph where the bubbles represent the survived or deceases 
-people in the titanic and its radio is the number of passenger.
+In the second graph you can see a bubble graph where the bubbles represent the survived or deceased 
+people in the titanic against the gender.
 
 ## Feedback
 I think narrative makes sense. It is clear you want to show all the information comparing deceasaed 
