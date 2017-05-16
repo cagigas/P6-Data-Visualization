@@ -1,0 +1,29 @@
+/* Title */
+h2 {
+	text-align: center;
+}
+/* Normal text */
+div {
+	text-align: justify;
+}
+/* Warning about browsers */
+p {
+	text-align: center;
+	font-style: italic;
+}
+body {
+	text-align: center;
+}
+.xvalues_buttons {
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+.xvalues_buttons2 {
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+.btn{
+	margin: 1px;
+}
