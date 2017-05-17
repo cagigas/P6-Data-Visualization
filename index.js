@@ -96,7 +96,6 @@ function plotBubble(data){
 	* it might be useful for the future.
 	*******************************************/
 	function chartUpdate2(xvalue) {
-		console.log("2",xvalue)
 		var myChart = new dimple.chart(svg, data);
 		
 		var x = myChart.addCategoryAxis("x", xvalues[xvaluesnames.indexOf(xvalue)]);
@@ -114,7 +113,7 @@ function plotBubble(data){
 		myChart.addMeasureAxis("z", "count");//Size of the bubble depending on number of passenger
 
 		//Define stacked bar chart split using survival status
-		var s = myChart.addSeries("PassengerStatus", dimple.plot.bubble);
+		var s = myChart.addSeries("PassengerStatus", dimple.plot.bar);
 
 		//Use aggregate function to calculate sum and percentage
 		s.aggregate = dimple.aggregateMethod.count;
@@ -132,6 +131,7 @@ function plotBubble(data){
 		myChart.assignColor("Deceased", "rgb(230,85,13)");
 		myChart.assignColor("Survived", "rgb(43,140,190)");
 		myChart.draw(1000);
+
 	}
 	chartUpdate2(xvalue);
 };
@@ -214,7 +214,8 @@ function plotChart(data){
 
 		//Define stacked bar chart split using survival status
 		var s = myChart.addSeries("PassengerStatus", dimple.plot.bar);
-
+			s.addOrderRule(['Survived','Deceased']);
+		
 		//Use aggregate function to calculate sum and percentage
 		s.aggregate = dimple.aggregateMethod.count;
 
@@ -230,6 +231,8 @@ function plotChart(data){
 		myChart.assignColor("Deceased", "rgb(230,85,13)");
 		myChart.assignColor("Survived", "rgb(43,140,190)");
 		myChart.draw(1000);
+		d3.selectAll('.dimple-bar.dimple-deceased').attr('visibility','hidden');
+
 	}
 	chartUpdate(xvalue);
 
