@@ -188,7 +188,7 @@ function plotChart(data){
 				.attr("width", width + margin)
 				.attr("height", height + margin)
 				.append('g')
-				.attr('class','chart');
+				.attr('class','chart nodeceased');
 				
 	var xvalue = "Class";
 	
@@ -231,7 +231,7 @@ function plotChart(data){
 		myChart.assignColor("Deceased", "rgb(230,85,13)");
 		myChart.assignColor("Survived", "rgb(43,140,190)");
 		myChart.draw(1000);
-		d3.selectAll('.dimple-bar.dimple-deceased').attr('visibility','hidden');
+		d3.selectAll('.nodeceased').selectAll('.dimple-bar.dimple-deceased').attr('visibility','hidden');
 
 	}
 	chartUpdate(xvalue);
