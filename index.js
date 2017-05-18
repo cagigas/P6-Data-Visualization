@@ -210,7 +210,7 @@ function plotChart(data){
 		x.title = xvalue;
 		
 		var y = myChart.addPctAxis("y", "count");//If only count: addMeasureAxis
-		y.title = "% Deceased/Survived";
+		y.title = "Survival Rate";
 
 		//Define stacked bar chart split using survival status
 		var s = myChart.addSeries("PassengerStatus", dimple.plot.bar);
@@ -227,9 +227,7 @@ function plotChart(data){
 		};
 
 		//Define legend position and color scheme for bars
-		myChart.addLegend(10, 10, 500, 30, "left");
-		myChart.assignColor("Deceased", "rgb(230,85,13)");
-		myChart.assignColor("Survived", "rgb(43,140,190)");
+		myChart.assignColor("Survived", "rgb(180,140,90)");
 		myChart.draw(1000);
 		d3.selectAll('.nodeceased').selectAll('.dimple-bar.dimple-deceased').attr('visibility','hidden');
 
